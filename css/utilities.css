@@ -245,8 +245,8 @@ h2::selection {
 }
 
 .pfp-icon {
-  width: 120px;
-  height: 120px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
 }
