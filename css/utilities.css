@@ -225,7 +225,7 @@ h2::selection {
   color: black;
 }
 
-dropdown-menu p {
+.dropdown-menu p {
   margin: 0;
   padding: 5px;
   color: black;
@@ -238,6 +238,7 @@ dropdown-menu p {
 
 .dropdown-menu a {
   display: block;
+  color: black;
   padding: 10px;
   text-decoration: none;
   white-space: nowrap;
