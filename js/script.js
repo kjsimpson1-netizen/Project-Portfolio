@@ -1,77 +1,113 @@
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
-hamburger.addEventListener("click", mobileMenu);
+
+/* Open / close mobile menu */
+if (hamburger && navMenu) {
+  hamburger.addEventListener("click", mobileMenu);
+}
 
 function mobileMenu() {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
 }
 
-// Close navbar when link is clicked
-const navLink = document.querySelectorAll(".nav-link");
 
-navLink.forEach((n) => n.addEventListener("click", closeMenu));
+/* Close navbar when a link is clicked */
+const navLinks = document.querySelectorAll(".nav-link");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", closeMenu);
+});
 
 function closeMenu() {
-  hamburger.classList.remove("active");
-  navMenu.classList.remove("active");
-}
-
-// Event Listeners: Handling toggle event
-const toggleSwitch = document.querySelector(
-  '.theme-switch input[type="checkbox"]'
-);
-
-function switchTheme(e) {
-  if (e.target.checked) {
-    document.documentElement.setAttribute("data-theme", "dark");
-  } else {
-    document.documentElement.setAttribute("data-theme", "light");
+  if (hamburger && navMenu) {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
   }
 }
 
-toggleSwitch.addEventListener("change", switchTheme, false);
 
-//  Store color theme for future visits
+/* =========================================================
+   DARK / LIGHT MODE
+   ========================================================= */
 
-function switchTheme(e) {
-  if (e.target.checked) {
-    document.documentElement.setAttribute("data-theme", "dark");
-    localStorage.setItem("theme", "dark"); //add this
-  } else {
-    document.documentElement.setAttribute("data-theme", "light");
-    localStorage.setItem("theme", "light"); //add this
+const themeSwitch = document.getElementById("switch");
+
+
+/* ---------------------------------------------------------
+   Load saved theme
+   --------------------------------------------------------- */
+
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+  document.documentElement.classList.add("dark");
+
+  if (themeSwitch) {
+    themeSwitch.checked = true;
   }
 }
 
-// Save user preference on load
 
-const currentTheme = localStorage.getItem("theme")
-  ? localStorage.getItem("theme")
-  : null;
+/* ---------------------------------------------------------
+   Change theme when toggle is clicked
+   --------------------------------------------------------- */
 
-if (currentTheme) {
-  document.documentElement.setAttribute("data-theme", currentTheme);
+if (themeSwitch) {
+  themeSwitch.addEventListener("change", () => {
 
-  if (currentTheme === "dark") {
-    toggleSwitch.checked = true;
-  }
+    if (themeSwitch.checked) {
+
+      // Enable dark mode
+      document.documentElement.classList.add("dark");
+
+      // Save preference
+      localStorage.setItem("theme", "dark");
+
+    } else {
+
+      // Enable light mode
+      document.documentElement.classList.remove("dark");
+
+      // Save preference
+      localStorage.setItem("theme", "light");
+
+    }
+
+  });
 }
 
-//Adding date
 
-let myDate = document.querySelector("#datee");
+/* =========================================================
+   CURRENT YEAR
+   ========================================================= */
 
-const yes = new Date().getFullYear();
-myDate.innerHTML = yes;
+const myDate = document.querySelector("#datee");
+
+if (myDate) {
+  myDate.innerHTML = new Date().getFullYear();
+}
+
+
+/* =========================================================
+   CONTACT DROPDOWN
+   ========================================================= */
 
 document.addEventListener("click", function (event) {
+
   const dropdowns = document.querySelectorAll("details");
 
   dropdowns.forEach(function (dropdown) {
+
     if (!dropdown.contains(event.target)) {
       dropdown.removeAttribute("open");
     }
+
   });
+
 });

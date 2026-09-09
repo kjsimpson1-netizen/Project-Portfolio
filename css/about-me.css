@@ -1,0 +1,69 @@
+/* =========================================================
+   ABOUT ME PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE LAYOUT
+   ========================================================= */
+
+body {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   RETURN TO HOMEPAGE LINK
+   ========================================================= */
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  color: var(--text-primary);
+
+  text-decoration: none;
+  font-weight: bold;
+
+  transition: 0.2s ease-in-out;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   TWO-COLUMN LAYOUT
+   ========================================================= */
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+
+/* Individual columns */
+.column {
+  padding: 10px;
+}
+
+
+/* =========================================================
+   MOBILE LAYOUT
+   ========================================================= */
+
+/* Stack columns on smaller screens */
+@media (max-width: 600px) {
+
+  .columns {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+}

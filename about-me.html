@@ -1,49 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 20px;
-            line-height: 1.6;
-        }
+  <!-- Load saved theme before the page renders -->
+  <script>
+    if (localStorage.getItem("theme") === "dark") {
+      document.documentElement.classList.add("dark");
+    }
+  </script>
 
-        .back-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: black;
-            text-decoration: none;
-            font-weight: bold;
-        }
+  <title>About Me</title>
 
-        .back-link:hover {
-            text-decoration: underline;
-        }
+  <!-- Shared theme -->
+  <link rel="stylesheet" href="css/theme.css" />
 
-        /* Two-column layout */
-        .columns {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
+  <!-- Shared utilities -->
+  <link rel="stylesheet" href="css/utilities.css" />
 
-        .column {
-            padding: 10px;
-        }
-
-        /* Stack columns on smaller screens */
-        @media (max-width: 600px) {
-            .columns {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+  <!-- About Me page-specific styling -->
+  <link rel="stylesheet" href="css/about-me.css" />
 </head>
 
 <body>

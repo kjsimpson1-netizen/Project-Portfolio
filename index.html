@@ -1,14 +1,26 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Load saved theme before the page renders -->
+  <script>
+    if (localStorage.getItem("theme") === "dark") {
+      document.documentElement.classList.add("dark");
+    }
+  </script>
+
   <title>Project One | Autonomous Robot</title>
 
-  <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
+  <link
+    rel="icon"
+    type="image/x-icon"
+    href="assets/favicon/favicon.ico"
+  />
 
+  <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -16,8 +28,14 @@
     crossorigin="anonymous"
   />
 
-  <link rel="stylesheet" href="css/style.css" />
+  <!-- Shared theme -->
+  <link rel="stylesheet" href="css/theme.css" />
+
+  <!-- Shared utilities -->
   <link rel="stylesheet" href="css/utilities.css" />
+
+  <!-- Page-specific styling -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
   <body>
     <header id="hero">
