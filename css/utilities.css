@@ -173,7 +173,7 @@ h2::selection {
 
 /* Project 5 */
 .card:nth-child(5) {
-  background: url(../assets/project/project-five.png) center center/cover;
+  background: url(../assets/project/computer-symbol.png) center center/cover;
 }
 
 /* Project 6 */
@@ -245,8 +245,8 @@ h2::selection {
 }
 
 .pfp-icon {
-  width: 120px;
-  height: 120px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
 }
