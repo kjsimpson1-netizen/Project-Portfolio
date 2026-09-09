@@ -134,12 +134,8 @@ h2::selection {
 
 /* Project Images */
 
-/* project 1 */
-.card:nth-child(1) {
-  background: url(../assets/project/project-one.png) center center/cover;
-}
-
-.project-one-card {
+/* All Project Cards */
+.card {
   position: relative;
   cursor: pointer;
 }
@@ -155,6 +151,10 @@ h2::selection {
   z-index: 2;
 }
 
+/* Project 1 */
+.card:nth-child(1) {
+  background: url(../assets/project/project-one.png) center center/cover;
+}
 
 /* Project 2 */
 .card:nth-child(2) {
