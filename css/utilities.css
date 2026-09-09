@@ -193,7 +193,7 @@ h2::selection {
   }
 }
 
-//Dropdown menu for contact information
+/* Dropdown menu for contact information */
 .contacts-dropdown {
   position: relative;
 }
