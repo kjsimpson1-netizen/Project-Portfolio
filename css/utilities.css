@@ -193,11 +193,12 @@ h2::selection {
   }
 }
 
-.resume-dropdown {
+//Dropdown menu for contact information
+.contacts-dropdown {
   position: relative;
 }
 
-.resume-dropdown summary {
+.contacts-dropdown summary {
   list-style: none;
   cursor: pointer;
 }
