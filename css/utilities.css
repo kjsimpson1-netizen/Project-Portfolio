@@ -220,6 +220,22 @@ h2::selection {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+dropdown-menu p {
+  margin: 0;
+  padding: 5px;
+  color: black;
+}
+
+.dropdown-menu a:focus {
+  outline: none;
+  background-color: #e0e0e0;
+}
+
 .dropdown-menu a {
   display: block;
   padding: 10px;
