@@ -139,6 +139,23 @@ h2::selection {
   background: url(../assets/project/project-one.png) center center/cover;
 }
 
+.project-one-card {
+  position: relative;
+  cursor: pointer;
+}
+
+.card-click-area {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.project-link {
+  position: relative;
+  z-index: 2;
+}
+
+
 /* Project 2 */
 .card:nth-child(2) {
   background: url(../assets/project/project-two.png) center center/cover;
