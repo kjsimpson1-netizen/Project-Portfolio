@@ -192,3 +192,33 @@ h2::selection {
     font-size: 2.5rem;
   }
 }
+
+.resume-dropdown {
+  position: relative;
+}
+
+.resume-dropdown summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.contacts-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 160px;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
