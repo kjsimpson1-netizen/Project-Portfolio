@@ -66,3 +66,12 @@ let myDate = document.querySelector("#datee");
 const yes = new Date().getFullYear();
 myDate.innerHTML = yes;
 
+document.addEventListener("click", function (event) {
+  const dropdowns = document.querySelectorAll("details");
+
+  dropdowns.forEach(function (dropdown) {
+    if (!dropdown.contains(event.target)) {
+      dropdown.removeAttribute("open");
+    }
+  });
+});
