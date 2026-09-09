@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 600px;
+            max-width: 900px;
             margin: 50px auto;
             padding: 20px;
             line-height: 1.6;
         }
+
         .back-link {
             display: inline-block;
             margin-bottom: 20px;
@@ -19,29 +21,63 @@
             text-decoration: none;
             font-weight: bold;
         }
+
         .back-link:hover {
             text-decoration: underline;
         }
+
+        /* Two-column layout */
+        .columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .column {
+            padding: 10px;
+        }
+
+        /* Stack columns on smaller screens */
+        @media (max-width: 600px) {
+            .columns {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
+
 <body>
 
-    <!-- The requested Return Link -->
     <a href="index.html" class="back-link">← Return to homepage</a>
 
     <h1>About Me</h1>
-    <h2>Introduction</h2>
-    <p>Hey! I'm a 3rd year Engineering Physics student taking a minor in honours mathematics. I aspire to pursue a masters program after my undergraduate studies.
-        I especially enjoy working on math and physics problems, and I     
-    </p>
-    
-    <h2>Hobbies and Interests</h2>
-    <p>In my free time, I enjoy going to the gym, listening to music, and spending time with friends. During the winter, I like skiing, and during the school year I
-        play on multiple intramural sports teams, such as volleyball and soccer. 
-    </p>
-    
+
+    <div class="columns">
+
+        <div class="column">
+            <h2>Introduction</h2>
+            <p>
+                Hey! I'm a 3rd year Engineering Physics student taking a
+                minor in honours mathematics. I aspire to pursue a masters
+                program after my undergraduate studies. I especially enjoy
+                working on math and physics problems.
+            </p>
+        </div>
+
+        <div class="column">
+            <h2>Hobbies and Interests</h2>
+            <p>
+                In my free time, I enjoy going to the gym, listening to music,
+                and spending time with friends. During the winter, I like
+                skiing, and during the school year I play on multiple
+                intramural sports teams, such as volleyball and soccer.
+            </p>
+        </div>
+
+    </div>
+
     <hr>
-    
+
     <h3>Project Details</h3>
     <ul>
         <li><strong>Role:</strong> Lead Developer</li>
