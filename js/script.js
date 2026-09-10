@@ -8,7 +8,7 @@ fetch("components/navbar.html")
 
     document.getElementById("navbar").innerHTML = data;
 
-    
+
 
 
     /* =========================================================
@@ -98,17 +98,6 @@ fetch("components/navbar.html")
 
     }
 
-  });
-
-
-/* =========================================================
-   LOAD FOOTER
-   ========================================================= */
-
-fetch("foot.html")
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("footer").innerHTML = data;
   });
 
 
