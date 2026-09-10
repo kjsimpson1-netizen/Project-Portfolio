@@ -28,7 +28,7 @@ h2::selection {
 }
 
 .btn-primary {
-  background: var(--primary-color);
+  background: var(--button-color);
   color: #000000;
 }
 
@@ -212,7 +212,7 @@ h2::selection {
   top: 100%;
   right: 0;
   min-width: 160px;
-  background: white;
+  background: var(--button-color);
   padding: 5px;
   font-size: 12px;
   color: black;
