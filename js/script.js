@@ -8,15 +8,6 @@ fetch("components/navbar.html")
 
     document.getElementById("navbar").innerHTML = data;
 
-});
-
-fetch("components/footer.html")
-  .then(response => response.text())
-  .then(data => {
-
-    document.getElementById("footer").innerHTML = data;
-
-});
 
     /* =========================================================
        MOBILE NAVIGATION
@@ -109,14 +100,28 @@ fetch("components/footer.html")
 
 
 /* =========================================================
-   CURRENT YEAR
+   LOAD FOOTER
    ========================================================= */
 
-const myDate = document.querySelector("#datee");
+fetch("foot.html")
+  .then(response => response.text())
+  .then(data => {
 
-if (myDate) {
-  myDate.innerHTML = new Date().getFullYear();
-}
+    document.getElementById("footer").innerHTML = data;
+
+
+    /* =========================================================
+       CURRENT YEAR
+       ========================================================= */
+
+    const myDate = document.querySelector("#datee");
+
+    if (myDate) {
+      myDate.innerHTML = new Date().getFullYear();
+    }
+
+  })
+  .catch(error => console.error("Error loading footer:", error));
 
 
 /* =========================================================
