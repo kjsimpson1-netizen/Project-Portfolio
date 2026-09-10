@@ -35,7 +35,7 @@ h2::selection {
 .btn-secondary {
   margin: 5px 0;
   background-color: var(--button-color);
-  color: var(black);
+  color: black;
 }
 
 /* add hover to resume button */
