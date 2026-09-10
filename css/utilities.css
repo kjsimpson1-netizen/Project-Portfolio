@@ -212,7 +212,7 @@ h2::selection {
   top: 100%;
   right: 0;
   min-width: 160px;
-  background: var(--button-color);
+  background: white;
   padding: 5px;
   font-size: 12px;
   color: black;

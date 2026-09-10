@@ -247,11 +247,15 @@ body {
 @media (max-width: 670px) {
   .navbar .nav-menu {
     position: fixed;
-    right: -100vw;
+    right: 20px;
     top: 4.5rem;
     flex-direction: column;
     width: calc(80% - 10px);
-    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(0);
+    transition: opacity 0.2s ease, visibility 0.2s ease;
     box-shadow: var(--shadow);
     padding: 2rem;
     border-radius: 5px;
@@ -264,7 +268,9 @@ body {
   }
 
   .nav-menu.active {
-    right: 20px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 
   .nav-menu .nav-link {
