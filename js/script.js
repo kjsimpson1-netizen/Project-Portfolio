@@ -8,6 +8,8 @@ fetch("components/navbar.html")
 
     document.getElementById("navbar").innerHTML = data;
 
+    
+
 
     /* =========================================================
        MOBILE NAVIGATION
@@ -106,22 +108,19 @@ fetch("components/navbar.html")
 fetch("foot.html")
   .then(response => response.text())
   .then(data => {
-
     document.getElementById("footer").innerHTML = data;
+  });
 
 
-    /* =========================================================
-       CURRENT YEAR
-       ========================================================= */
+/* =========================================================
+   CURRENT YEAR
+   ========================================================= */
 
-    const myDate = document.querySelector("#datee");
+const myDate = document.querySelector("#datee");
 
-    if (myDate) {
-      myDate.innerHTML = new Date().getFullYear();
-    }
-
-  })
-  .catch(error => console.error("Error loading footer:", error));
+if (myDate) {
+  myDate.innerHTML = new Date().getFullYear();
+}
 
 
 /* =========================================================
