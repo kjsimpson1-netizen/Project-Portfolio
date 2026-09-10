@@ -60,3 +60,25 @@
     padding: 20px;
   }
 }
+
+@media (max-width: 670px) {
+  .project-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.project-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: center;
+  padding: 40px 0;
+  border-bottom: 1px solid var(--card-background);
+}
+
+.project-section .column img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
