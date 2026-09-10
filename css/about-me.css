@@ -7,18 +7,6 @@
    HEADER + COLOUR THEME
    ========================================================= */
 
-/* Header stays full width */
-.navbar {
-  width: 100%;
-}
-
-/* Center the header contents */
-.navbar .container {
-  max-width: var(--width-large);
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
 /* Page background and text follow the theme */
 body {
   background: var(--bg-primary);

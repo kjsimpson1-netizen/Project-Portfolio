@@ -278,6 +278,17 @@ body {
     margin-top: 0.5rem;
   }
 
+  .navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  max-width: var(--width-large);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
   .hamburger {
     display: block;
     cursor: pointer;
