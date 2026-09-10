@@ -1,92 +1,102 @@
 /* =========================================================
-   MOBILE NAVIGATION
+   LOAD NAVBAR
    ========================================================= */
 
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+fetch("components/nav-bar.html")
+  .then(response => response.text())
+  .then(data => {
+
+    document.getElementById("navbar").innerHTML = data;
 
 
-/* Open / close mobile menu */
-if (hamburger && navMenu) {
-  hamburger.addEventListener("click", mobileMenu);
-}
+    /* =========================================================
+       MOBILE NAVIGATION
+       ========================================================= */
 
-function mobileMenu() {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-}
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
 
+    /* Open / close mobile menu */
+    if (hamburger && navMenu) {
+      hamburger.addEventListener("click", mobileMenu);
+    }
 
-/* Close navbar when a link is clicked */
-const navLinks = document.querySelectorAll(".nav-link");
-
-navLinks.forEach((link) => {
-  link.addEventListener("click", closeMenu);
-});
-
-function closeMenu() {
-  if (hamburger && navMenu) {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-  }
-}
+    function mobileMenu() {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
 
 
-/* =========================================================
-   DARK / LIGHT MODE
-   ========================================================= */
+    /* Close navbar when a link is clicked */
+    const navLinks = document.querySelectorAll(".nav-link");
 
-const themeSwitch = document.getElementById("switch");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
 
-
-/* ---------------------------------------------------------
-   Load saved theme
-   --------------------------------------------------------- */
-
-const savedTheme = localStorage.getItem("theme");
-
-if (savedTheme === "dark") {
-  document.documentElement.setAttribute("data-theme", "dark");
-
-  if (themeSwitch) {
-    themeSwitch.checked = true;
-  }
-} else {
-  document.documentElement.removeAttribute("data-theme");
-
-  if (themeSwitch) {
-    themeSwitch.checked = false;
-  }
-}
+    function closeMenu() {
+      if (hamburger && navMenu) {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+      }
+    }
 
 
-/* ---------------------------------------------------------
-   Change theme when toggle is clicked
-   --------------------------------------------------------- */
+    /* =========================================================
+       DARK / LIGHT MODE
+       ========================================================= */
 
-if (themeSwitch) {
-  themeSwitch.addEventListener("change", () => {
+    const themeSwitch = document.getElementById("switch");
 
-    if (themeSwitch.checked) {
 
-      // Enable dark mode
+    /* Load saved theme */
+
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "dark") {
+
       document.documentElement.setAttribute("data-theme", "dark");
 
-      // Save preference
-      localStorage.setItem("theme", "dark");
+      if (themeSwitch) {
+        themeSwitch.checked = true;
+      }
 
     } else {
 
-      // Enable light mode
       document.documentElement.removeAttribute("data-theme");
 
-      // Save preference
-      localStorage.setItem("theme", "light");
+      if (themeSwitch) {
+        themeSwitch.checked = false;
+      }
+
+    }
+
+
+    /* Change theme when toggle is clicked */
+
+    if (themeSwitch) {
+
+      themeSwitch.addEventListener("change", () => {
+
+        if (themeSwitch.checked) {
+
+          document.documentElement.setAttribute("data-theme", "dark");
+
+          localStorage.setItem("theme", "dark");
+
+        } else {
+
+          document.documentElement.removeAttribute("data-theme");
+
+          localStorage.setItem("theme", "light");
+
+        }
+
+      });
 
     }
 
   });
-}
 
 
 /* =========================================================
@@ -117,9 +127,3 @@ document.addEventListener("click", function (event) {
   });
 
 });
-
-fetch("components/navbar.html")
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("navbar").innerHTML = data;
-  });
