@@ -2,7 +2,7 @@
    LOAD NAVBAR
    ========================================================= */
 
-fetch("components/nav-bar.html")
+fetch("components/navbar.html")
   .then(response => response.text())
   .then(data => {
 
