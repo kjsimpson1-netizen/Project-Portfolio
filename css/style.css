@@ -347,3 +347,11 @@ body {
   height: auto;
   display: block;
 }
+
+.pdf-link {
+  color: #0000EE;
+}
+
+.pdf-link:hover {
+  color: #551A8B;
+}
