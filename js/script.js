@@ -46,10 +46,16 @@ const themeSwitch = document.getElementById("switch");
 const savedTheme = localStorage.getItem("theme");
 
 if (savedTheme === "dark") {
-  document.documentElement.classList.add("dark");
+  document.documentElement.setAttribute("data-theme", "dark");
 
   if (themeSwitch) {
     themeSwitch.checked = true;
+  }
+} else {
+  document.documentElement.removeAttribute("data-theme");
+
+  if (themeSwitch) {
+    themeSwitch.checked = false;
   }
 }
 
@@ -64,7 +70,7 @@ if (themeSwitch) {
     if (themeSwitch.checked) {
 
       // Enable dark mode
-      document.documentElement.classList.add("dark");
+      document.documentElement.setAttribute("data-theme", "dark");
 
       // Save preference
       localStorage.setItem("theme", "dark");
@@ -72,7 +78,7 @@ if (themeSwitch) {
     } else {
 
       // Enable light mode
-      document.documentElement.classList.remove("dark");
+      document.documentElement.removeAttribute("data-theme");
 
       // Save preference
       localStorage.setItem("theme", "light");
