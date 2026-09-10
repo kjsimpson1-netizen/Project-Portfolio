@@ -7,7 +7,7 @@
   <!-- Load saved theme before the page renders -->
   <script>
     if (localStorage.getItem("theme") === "dark") {
-      document.documentElement.classList.add("dark");
+      document.documentElement.setAttribute("data-theme", "dark");
     }
   </script>
 
@@ -25,94 +25,151 @@
 
 <body>
 
-         <!-- Navbar -->
-      <nav class="navbar">
-        <div class="container">
-          <!-- Logo -->
-          <h1 id="logo">
-            <a href="https://github.com/CommunityPro/portfolio-html"
-              ><img src="./assets/logo.png" alt="Your Logo"
-            /></a>
-          </h1>
-          <!-- Navbar links -->
-          <ul class="nav-menu">
-            <li><a class="nav-link" href="#projects">PROJECTS</a></li>
-            <li class="contacts-dropdown">
-              <details>
-                <summary class="nav-link btn btn-primary">
-                  CONTACT <i class="fas fa-arrow-right"></i>
-                </summary>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
 
-                <div class="dropdown-menu">
-                  <p>Email: <a href="mailto:kjsimpson1@outlook.com">kjsimpson1@outlook.com</a></p>
-                  <p>Phone: <a href="tel:+12503288469">(250) 325-8469</a></p>
-                  <p>LinkedIn: <a href="https://www.linkedin.com/in/kyle-simpson" target="_blank">Kyle Simpson</a></p>
-                  <p>GitHub: <a href="https://github.com/kjsimpson1-netizen" target="_blank">kjsimpson1-netizen</a></p>
-                </div>
-              </details>
-            </li>
-            <li>
-              <a
-                class="nav-link btn btn-primary"
-                href="https://docs.google.com/document/d/1hHmO3fPN7a6UdhySEbRnYynG5aDEhNfoFWx48dLpyxg/edit?usp=sharing"
-                >RESUME <i class="fas fa-arrow-right"></i
-              ></a>
-            </li>
+      <!-- Logo -->
+      <h1 id="logo">
+        <a href="index.html">
+          <img src="./assets/logo.png" alt="Your Logo" />
+        </a>
+      </h1>
 
-            <!-- Toggle switch -->
-            <div class="theme-switch">
-              <input type="checkbox" id="switch" />
-              <label class="toggle-icons" for="switch">
-                <img class="moon" src="assets/moon.svg" />
-                <img class="sun" src="assets/sun.svg" />
-              </label>
+      <!-- Navbar links -->
+      <ul class="nav-menu">
+
+        <li>
+          <a class="nav-link" href="index.html#projects">PROJECTS</a>
+        </li>
+
+        <li class="contacts-dropdown">
+          <details>
+            <summary class="nav-link btn btn-primary">
+              CONTACT <i class="fas fa-arrow-right"></i>
+            </summary>
+
+            <div class="dropdown-menu">
+              <p>
+                Email:
+                <a href="mailto:kjsimpson1@outlook.com">
+                  kjsimpson1@outlook.com
+                </a>
+              </p>
+
+              <p>
+                Phone:
+                <a href="tel:+12503288469">
+                  (250) 325-8469
+                </a>
+              </p>
+
+              <p>
+                LinkedIn:
+                <a
+                  href="https://www.linkedin.com/in/kyle-simpson"
+                  target="_blank"
+                >
+                  Kyle Simpson
+                </a>
+              </p>
+
+              <p>
+                GitHub:
+                <a
+                  href="https://github.com/kjsimpson1-netizen"
+                  target="_blank"
+                >
+                  kjsimpson1-netizen
+                </a>
+              </p>
             </div>
-            <!-- Hamburger menu -->
-          </ul>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-        </div>
-      </nav>
+          </details>
+        </li>
 
-    <a href="index.html" class="back-link">← Return to homepage</a>
+        <li>
+          <a
+            class="nav-link btn btn-primary"
+            href="https://docs.google.com/document/d/1hHmO3fPN7a6UdhySEbRnYynG5aDEhNfoFWx48dLpyxg/edit?usp=sharing"
+          >
+            RESUME <i class="fas fa-arrow-right"></i>
+          </a>
+        </li>
+
+        <!-- Toggle switch -->
+        <li>
+          <div class="theme-switch">
+            <input type="checkbox" id="switch" />
+
+            <label class="toggle-icons" for="switch">
+              <img class="moon" src="assets/moon.svg" alt="Dark mode" />
+              <img class="sun" src="assets/sun.svg" alt="Light mode" />
+            </label>
+          </div>
+        </li>
+
+      </ul>
+
+      <!-- Hamburger menu -->
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- About Me Content -->
+  <main class="about-content">
+
+    <a href="index.html" class="back-link">
+      ← Return to homepage
+    </a>
 
     <h1>About Me</h1>
 
     <div class="columns">
 
-        <div class="column">
-            <h2>Introduction</h2>
-            <p>
-                Hey! I'm a 3rd year Engineering Physics student taking a
-                minor in honours mathematics. I aspire to pursue a masters
-                program after my undergraduate studies. I especially enjoy
-                working on math and physics problems.
-            </p>
-        </div>
+      <div class="column">
+        <h2>Introduction</h2>
 
-        <div class="column">
-            <h2>Hobbies and Interests</h2>
-            <p>
-                In my free time, I enjoy going to the gym, listening to music,
-                and spending time with friends. During the winter, I like
-                skiing, and during the school year I play on multiple
-                intramural sports teams, such as volleyball and soccer.
-            </p>
-        </div>
+        <p>
+          Hey! I'm a 3rd year Engineering Physics student taking a
+          minor in honours mathematics. I aspire to pursue a masters
+          program after my undergraduate studies. I especially enjoy
+          working on math and physics problems.
+        </p>
+      </div>
+
+      <div class="column">
+        <h2>Hobbies and Interests</h2>
+
+        <p>
+          In my free time, I enjoy going to the gym, listening to music,
+          and spending time with friends. During the winter, I like
+          skiing, and during the school year I play on multiple
+          intramural sports teams, such as volleyball and soccer.
+        </p>
+      </div>
 
     </div>
 
     <hr>
 
     <h3>Project Details</h3>
+
     <ul>
-        <li><strong>Role:</strong> Lead Developer</li>
-        <li><strong>Tools Used:</strong> HTML, CSS, Netlify</li>
-        <li><strong>Outcome:</strong> Successful cross-page linking test.</li>
+      <li><strong>Role:</strong> Lead Developer</li>
+      <li><strong>Tools Used:</strong> HTML, CSS, Netlify</li>
+      <li><strong>Outcome:</strong> Successful cross-page linking test.</li>
     </ul>
+
+  </main>
+
+
+  <script src="js/script.js"></script>
 
 </body>
 </html>

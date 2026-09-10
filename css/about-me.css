@@ -2,68 +2,54 @@
    ABOUT ME PAGE
    ========================================================= */
 
-
-/* =========================================================
-   PAGE LAYOUT
-   ========================================================= */
-
-body {
-  font-family: Arial, sans-serif;
+/* Page content */
+.about-content {
   max-width: 900px;
-  margin: 50px auto;
+  margin: 120px auto 50px;
   padding: 20px;
   line-height: 1.6;
 }
 
-
-/* =========================================================
-   RETURN TO HOMEPAGE LINK
-   ========================================================= */
-
+/* Return to homepage */
 .back-link {
   display: inline-block;
   margin-bottom: 20px;
-
   color: var(--text-primary);
-
   text-decoration: none;
   font-weight: bold;
-
   transition: 0.2s ease-in-out;
 }
 
 .back-link:hover {
-  text-decoration: underline;
+  opacity: 0.7;
 }
 
-
-/* =========================================================
-   TWO-COLUMN LAYOUT
-   ========================================================= */
-
+/* Two-column layout */
 .columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
 }
 
-
-/* Individual columns */
 .column {
   padding: 10px;
 }
 
+/* Project details */
+.about-content hr {
+  margin: 40px 0;
+  border: none;
+  border-top: 2px solid var(--card-background);
+}
 
-/* =========================================================
-   MOBILE LAYOUT
-   ========================================================= */
+.about-content ul {
+  padding-left: 20px;
+}
 
-/* Stack columns on smaller screens */
+/* Mobile */
 @media (max-width: 600px) {
-
   .columns {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-
 }
