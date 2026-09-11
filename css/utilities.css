@@ -87,7 +87,6 @@ h2::selection {
   position: absolute;
 }
 
-
 /* Dark mode toggle */
 
 #switch {
@@ -131,6 +130,16 @@ h2::selection {
   position: absolute;
 
   /* Make sun black/dark */
+  filter: brightness(0);
+}
+
+.linked-in {
+  position: absolute;
+  filter: brightness(0);
+}
+
+.github {
+  position: absolute;
   filter: brightness(0);
 }
 
