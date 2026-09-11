@@ -1,0 +1,96 @@
+/* =========================================================
+   ABOUT ME PAGE
+   ========================================================= */
+
+.about-content {
+  max-width: 900px;
+  margin: 120px auto 50px;
+  padding: 20px;
+}
+
+/* Return link */
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s ease-in-out;
+}
+
+.back-link:hover {
+  opacity: 0.7;
+}
+
+/* Two columns */
+
+.columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 40px;
+}
+
+.column {
+  padding: 10px;
+  min-width: 0;
+}
+
+/* Project details */
+
+.about-content hr {
+  margin: 40px 0;
+  border: none;
+  border-top: 2px solid var(--card-background);
+}
+
+.about-content ul {
+  padding-left: 20px;
+}
+
+/* Mobile */
+
+@media (max-width: 670px) {
+  .columns {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 670px) {
+  .project-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.project-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: center;
+  padding: 40px 0;
+  border-bottom: 1px solid var(--card-background);
+}
+
+.project-section .column img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pdf-link {
+  color: #0000EE;
+}
+
+.pdf-link:hover {
+  color: #551A8B;
+}
+
+h1 {
+  text-align: center;
+}

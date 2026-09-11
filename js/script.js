@@ -1,67 +1,145 @@
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+/* =========================================================
+   LOAD NAVBAR
+   ========================================================= */
 
-hamburger.addEventListener("click", mobileMenu);
+fetch("components/navbar.html")
+  .then(response => response.text())
+  .then(data => {
 
-function mobileMenu() {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
+    document.getElementById("navbar").innerHTML = data;
+
+
+    /* =========================================================
+       MOBILE NAVIGATION
+       ========================================================= */
+
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    /* Open / close mobile menu */
+    if (hamburger && navMenu) {
+      hamburger.addEventListener("click", mobileMenu);
+    }
+
+    function mobileMenu() {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+
+    /* Close navbar when a link is clicked */
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    function closeMenu() {
+      if (hamburger && navMenu) {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+      }
+    }
+
+
+    /* =========================================================
+       DARK / LIGHT MODE
+       ========================================================= */
+
+    const themeSwitch = document.getElementById("switch");
+
+    /* Load saved theme */
+
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "dark") {
+
+      document.documentElement.setAttribute("data-theme", "dark");
+
+      if (themeSwitch) {
+        themeSwitch.checked = true;
+      }
+
+    } else {
+
+      document.documentElement.removeAttribute("data-theme");
+
+      if (themeSwitch) {
+        themeSwitch.checked = false;
+      }
+
+    }
+
+
+    /* Change theme when toggle is clicked */
+
+    if (themeSwitch) {
+
+      themeSwitch.addEventListener("change", () => {
+
+        if (themeSwitch.checked) {
+
+          document.documentElement.setAttribute("data-theme", "dark");
+
+          localStorage.setItem("theme", "dark");
+
+        } else {
+
+          document.documentElement.removeAttribute("data-theme");
+
+          localStorage.setItem("theme", "light");
+
+        }
+
+      });
+
+    }
+
+  });
+
+
+/* =========================================================
+   LOAD FOOTER
+   ========================================================= */
+
+fetch("components/footer.html")
+  .then(response => response.text())
+  .then(data => {
+
+    const footer = document.getElementById("footer");
+
+    if (footer) {
+      footer.innerHTML = data;
+    }
+
+  });
+
+
+/* =========================================================
+   CURRENT YEAR
+   ========================================================= */
+
+const myDate = document.querySelector("#datee");
+
+if (myDate) {
+  myDate.innerHTML = new Date().getFullYear();
 }
 
-// Close navbar when link is clicked
-const navLink = document.querySelectorAll(".nav-link");
 
-navLink.forEach((n) => n.addEventListener("click", closeMenu));
+/* =========================================================
+   CONTACT DROPDOWN
+   ========================================================= */
 
-function closeMenu() {
-  hamburger.classList.remove("active");
-  navMenu.classList.remove("active");
-}
+document.addEventListener("click", function (event) {
 
-// Event Listeners: Handling toggle event
-const toggleSwitch = document.querySelector(
-  '.theme-switch input[type="checkbox"]'
-);
+  const dropdowns = document.querySelectorAll("details");
 
-function switchTheme(e) {
-  if (e.target.checked) {
-    document.documentElement.setAttribute("data-theme", "dark");
-  } else {
-    document.documentElement.setAttribute("data-theme", "light");
-  }
-}
+  dropdowns.forEach(function (dropdown) {
 
-toggleSwitch.addEventListener("change", switchTheme, false);
+    if (!dropdown.contains(event.target)) {
+      dropdown.removeAttribute("open");
+    }
 
-//  Store color theme for future visits
+  });
 
-function switchTheme(e) {
-  if (e.target.checked) {
-    document.documentElement.setAttribute("data-theme", "dark");
-    localStorage.setItem("theme", "dark"); //add this
-  } else {
-    document.documentElement.setAttribute("data-theme", "light");
-    localStorage.setItem("theme", "light"); //add this
-  }
-}
-
-// Save user preference on load
-
-const currentTheme = localStorage.getItem("theme")
-  ? localStorage.getItem("theme")
-  : null;
-
-if (currentTheme) {
-  document.documentElement.setAttribute("data-theme", currentTheme);
-
-  if (currentTheme === "dark") {
-    toggleSwitch.checked = true;
-  }
-}
-
-//Adding date
-
-let myDate = document.querySelector("#datee");
-
-const yes = new Date().getFullYear();
-myDate.innerHTML = yes;
+});

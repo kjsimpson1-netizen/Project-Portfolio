@@ -28,48 +28,138 @@ h2::selection {
 }
 
 .btn-primary {
-  background: var(--primary-color);
+  background: var(--button-color);
   color: #000000;
 }
 
 .btn-secondary {
   margin: 5px 0;
-  background-color: var(--bg-secondary);
-  color: var(--bg-primary);
+  background-color: var(--button-color);
+  color: black;
 }
 
 /* add hover to resume button */
 .btn-primary:hover {
-  background: var(--secondary-color);
+  background: var(--button-color-hover);
+}
+
+.btn-secondary:hover {
+  background-color: var(--button-color-hover);
 }
 
 /* Dark mode toggle */
+
 #switch {
   display: none;
 }
 
 .toggle-icons {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  width: 30px;
+  height: 30px;
 }
 
 .toggle-icons > img {
-  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   width: 30px;
+  transition:
+    opacity 0.3s ease,
+    transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
+/* =========================
+   LIGHT MODE
+   ========================= */
+
+/* Hide moon in light mode */
 .moon {
-  transform: rotate(10deg);
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
 }
 
+/* Show sun in light mode */
+.sun {
+  opacity: 1;
+  position: absolute;
+}
+
+.github,
+.linked-in {
+  filter: brightness(0);
+  transition: filter 0.3s ease;
+}
+
+[data-theme="dark"] .github,
+[data-theme="dark"] .linked-in {
+  filter: brightness(0) invert(1);
+}
+
+/* Dark mode toggle */
+
+#switch {
+  display: none;
+}
+
+.toggle-icons {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.toggle-icons > img {
+  width: 30px;
+  transition:
+    opacity 0.3s ease,
+    transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* =========================
+   LIGHT MODE
+   ========================= */
+
+/* Hide moon in light mode */
+.moon {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+
+  /* Make moon white */
+  filter: brightness(0) invert(1);
+}
+
+/* Show dark sun in light mode */
+.sun {
+  opacity: 1;
+  position: absolute;
+
+  /* Make sun black/dark */
+  filter: brightness(0);
+}
+
+
+/* =========================
+   DARK MODE
+   ========================= */
+
+/* Show white moon when dark mode is active */
 #switch:checked + .toggle-icons .moon {
+  opacity: 1;
   transform: rotate(250deg);
 }
 
+/* Hide sun when dark mode is active */
 #switch:checked + .toggle-icons .sun {
+  opacity: 0;
   transform: rotate(100deg);
+  pointer-events: none;
 }
 
 /* Header Container */
@@ -134,9 +224,26 @@ h2::selection {
 
 /* Project Images */
 
-/* project 1 */
+/* All Project Cards */
+.card {
+  position: relative;
+  cursor: pointer;
+}
+
+.card-click-area {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.project-link {
+  position: relative;
+  z-index: 2;
+}
+
+/* Project 1 */
 .card:nth-child(1) {
-  background: url(../assets/project/project-one.png) center center/cover;
+  background: url(../assets/ezekiel.jpg) center center/cover;
 }
 
 /* Project 2 */
@@ -151,17 +258,17 @@ h2::selection {
 
 /* Project 4 */
 .card:nth-child(4) {
-  background: url(../assets/project/project-four.png) center center/cover;
+  background: url(../assets/projectportfolio.jpg) center center/cover;
 }
 
 /* Project 5 */
 .card:nth-child(5) {
-  background: url(../assets/project/project-five.png) center center/cover;
+  background: url(../assets/computer-symbol.png) center center/cover;
 }
 
 /* Project 6 */
 .card:nth-child(6) {
-  background: url(../assets/project/project-six.png) center center/cover;
+  background: url(../assets/obsidian.jpg) center center/cover;
 }
 
 /* Media Queries */
@@ -174,4 +281,62 @@ h2::selection {
   .content-text h2 {
     font-size: 2.5rem;
   }
+}
+
+/* Dropdown menu for contact information */
+.contacts-dropdown {
+  position: relative;
+}
+
+.contacts-dropdown summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.contacts-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 160px;
+  background: white;
+  padding: 5px;
+  font-size: 12px;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+.dropdown-menu p {
+  margin: 0;
+  padding: 5px;
+  color: black;
+}
+
+.dropdown-menu a:focus {
+  outline: none;
+  background-color: #e0e0e0;
+}
+
+.dropdown-menu a {
+  display: block;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.pfp-icon {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
 }
