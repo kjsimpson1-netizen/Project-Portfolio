@@ -9,8 +9,6 @@ fetch("components/navbar.html")
     document.getElementById("navbar").innerHTML = data;
 
 
-
-
     /* =========================================================
        MOBILE NAVIGATION
        ========================================================= */
@@ -49,7 +47,6 @@ fetch("components/navbar.html")
        ========================================================= */
 
     const themeSwitch = document.getElementById("switch");
-
 
     /* Load saved theme */
 
@@ -96,6 +93,23 @@ fetch("components/navbar.html")
 
       });
 
+    }
+
+  });
+
+
+/* =========================================================
+   LOAD FOOTER
+   ========================================================= */
+
+fetch("components/footer.html")
+  .then(response => response.text())
+  .then(data => {
+
+    const footer = document.getElementById("footer");
+
+    if (footer) {
+      footer.innerHTML = data;
     }
 
   });
