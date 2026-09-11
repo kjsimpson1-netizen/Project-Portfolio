@@ -87,14 +87,15 @@ h2::selection {
   position: absolute;
 }
 
+.github,
 .linked-in {
-  position: relative;
-  filter: brightness(100);
+  filter: brightness(0);
+  transition: filter 0.3s ease;
 }
 
-.github {
-  position: relative;
-  filter: brightness(100);
+[data-theme="dark"] .github,
+[data-theme="dark"] .linked-in {
+  filter: brightness(0) invert(1);
 }
 
 /* Dark mode toggle */
@@ -140,16 +141,6 @@ h2::selection {
   position: absolute;
 
   /* Make sun black/dark */
-  filter: brightness(0);
-}
-
-.linked-in {
-  position: relative;
-  filter: brightness(0);
-}
-
-.github {
-  position: relative;
   filter: brightness(0);
 }
 
