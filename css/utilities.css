@@ -87,6 +87,16 @@ h2::selection {
   position: absolute;
 }
 
+.linked-in {
+  position: relative;
+  filter: brightness(100);
+}
+
+.github {
+  position: relative;
+  filter: brightness(100);
+}
+
 /* Dark mode toggle */
 
 #switch {
@@ -134,12 +144,12 @@ h2::selection {
 }
 
 .linked-in {
-  position: absolute;
+  position: relative;
   filter: brightness(0);
 }
 
 .github {
-  position: absolute;
+  position: relative;
   filter: brightness(0);
 }
 
