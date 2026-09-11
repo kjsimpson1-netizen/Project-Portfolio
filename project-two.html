@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Load saved theme before the page renders -->
-  <script>
-    if (localStorage.getItem("theme") === "dark") {
-      document.documentElement.setAttribute("data-theme", "dark");
-    }
-  </script>
+<script>
+  if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.setAttribute("data-theme", "dark");
+  }
+</script>
 
   <title>About Me</title>
 
@@ -36,23 +36,74 @@
 
 <body>
 
-<div id="navbar"></div>
+      <!-- Navbar -->
+      <div id="navbar"></div>
 
-<main class="about-content">
+    <main class="about-content">
 
-  <h1>Controllable Arm</h1>
+  <h1>Mechanical Arm</h1>
 
-  <h2>Overview</h2>
+  <div class="project-section">
 
-  <p>
-    Text goes here
-  </p>
+  <div class="column">
+    <h2>Overview</h2>
+    <p>
+      After I had completed the <a href="project-one.html"><u>Autonomous Robot</u></a> project, I wanted to 
+      get a chance to work on the electrical and code oriented portions of the project. I reacreated the 
+      arm portion of the robot, and made it controllable both with a set of dials, as well as wirelessly
+      via a wifi controller. 
+    </p>
+  </div>
+
+  <div class="column">
+    <img src="assets/teamphoto.jpg" alt="Autonomous Robot project team">
+  </div>
+
+</div>
+
+
+<div class="project-section">
+
+  <div class="column">
+    <a href="https://cad.onshape.com/documents/52e7014a22681214e1fbe309/w/de1a0660c5293d94a979a077/e/1ccdbfbc0eca7409c34aaca4?renderMode=0&uiState=6aa32906e0fe89370f30ceb6" target="_blank">
+      <img src="assets/ezekielCAD.jpg" alt="Robot design">
+    </a>
+  </div>
+
+    <div class="column">
+    <h2>Software</h2>
+    <p>
+      The firmmware for the arm was written in C++ using PlatformIO, and ran on an ESP32 microcontroller (code available on my 
+      <a href="https://github.com/kylesimpson/controllable-arm" target="_blank">GitHub</a>).
+    </p>
+  </div>
+
+</div>
+
+<div class="project-section">
+
+    <div class="column">
+    <h2>My Role</h2>
+    <p>
+      I designed the robot online using OnShape, and then I manufactured the parts using a variety of methods.
+      I primarily used 3D printers, as well as 6mm particle board which was cut with a laser cutter. There were also
+      6mm aluminum sheet metal that was cut with a waterjet for the arm.
+    </p>
+  </div>
+
+  <div class="column">
+    <a href="https://cad.onshape.com/documents/52e7014a22681214e1fbe309/w/de1a0660c5293d94a979a077/e/1ccdbfbc0eca7409c34aaca4?renderMode=0&uiState=6aa32906e0fe89370f30ceb6" target="_blank">
+      <img src="assets/ezekielCAD.jpg" alt="Robot design">
+    </a>
+  </div>
+
+</div>
 
 </main>
 
 <div id="footer"></div>
 
-<script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 </html>
