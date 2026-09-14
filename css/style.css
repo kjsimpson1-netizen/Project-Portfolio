@@ -112,6 +112,7 @@ body {
 .hamburger {
   margin-bottom: 0.1rem;
   display: none;
+  color: var(--text-primary);
 }
 
 .bar {
