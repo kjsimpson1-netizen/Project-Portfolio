@@ -112,7 +112,6 @@ body {
 .hamburger {
   margin-bottom: 0.1rem;
   display: none;
-  color: var(--text-primary);
 }
 
 .bar {
@@ -122,7 +121,7 @@ body {
   margin: 4px auto;
   transition: all 0.3s ease-in-out;
   border-radius: 30px;
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-primary);
 }
 
 /* Hero section */
