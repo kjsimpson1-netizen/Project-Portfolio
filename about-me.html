@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Load saved theme before the page renders -->
+  <script>
+    if (localStorage.getItem("theme") === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  </script>
+
+  <title>About Me</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+    crossorigin="anonymous"
+  />
+
+  <!-- Shared theme -->
+  <link rel="stylesheet" href="css/theme.css" />
+
+  <!-- Shared utilities -->
+  <link rel="stylesheet" href="css/utilities.css" />
+
+  <!-- General styling -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- About Me page-specific styling -->
+  <link rel="stylesheet" href="css/about-me.css" />
+</head>
+
+<body>
+
+<div id="navbar"></div>
+
+
+  <!-- About Me Content -->
+  <main class="about-content">
+
+    <a href="index.html" class="back-link">
+      ← Return to homepage
+    </a>
+
+    <h1>About Me</h1>
+
+    <div class="columns">
+
+      <div class="column">
+        <h2>Introduction</h2>
+
+        <p>
+          Hey! I'm a 3rd year Engineering Physics student taking a
+          minor in honours mathematics. I aspire to pursue a masters
+          program after my undergraduate studies. I especially enjoy
+          working on math and physics problems.
+        </p>
+      </div>
+
+      <div class="column">
+        <h2>Hobbies and Interests</h2>
+
+        <p>
+          In my free time, I enjoy going to the gym, listening to music,
+          and spending time with friends. During the winter, I like
+          skiing, and during the school year I play on multiple
+          intramural sports teams, such as volleyball and soccer.
+        </p>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <h3>Project Details</h3>
+
+    <ul>
+      <li><strong>Role:</strong> Lead Developer</li>
+      <li><strong>Tools Used:</strong> HTML, CSS, Netlify</li>
+      <li><strong>Outcome:</strong> Successful cross-page linking test.</li>
+    </ul>
+
+  </main>
+
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

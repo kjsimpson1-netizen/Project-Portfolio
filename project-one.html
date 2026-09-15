@@ -1,45 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project One | Detail Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
-            line-height: 1.6;
-        }
-        .back-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #0066cc;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .back-link:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Load saved theme before the page renders -->
+<script>
+  if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.setAttribute("data-theme", "dark");
+  }
+</script>
+
+  <title>About Me</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+    crossorigin="anonymous"
+  />
+
+  <!-- Shared theme -->
+  <link rel="stylesheet" href="css/theme.css" />
+
+  <!-- Shared utilities -->
+  <link rel="stylesheet" href="css/utilities.css" />
+
+  <!-- General styling -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- About Me page-specific styling -->
+  <link rel="stylesheet" href="css/about-me.css" />
 </head>
+
 <body>
 
-    <!-- The requested Return Link -->
-    <a href="index.html" class="back-link">← Return to homepage</a>
+      <!-- Navbar -->
+      <div id="navbar"></div>
 
-    <h1>🚀 Project One Showcase</h1>
-    <p>This is a rudimentary test page. If you clicked a link from your homepage and landed here, your file mapping works perfectly!</p>
-    
-    <hr>
-    
-    <h3>Project Details</h3>
-    <ul>
-        <li><strong>Role:</strong> Lead Developer</li>
-        <li><strong>Tools Used:</strong> HTML, CSS, Netlify</li>
-        <li><strong>Outcome:</strong> Successful cross-page linking test.</li>
-    </ul>
+    <main class="about-content">
+
+  <h1>Autonomous Robot</h1>
+
+  <div class="project-section">
+
+  <div class="column">
+    <h2>Overview</h2>
+    <p>
+      I worked together with 3 other Engineering Physics students to design
+      an autonomous robot. The challenge was to create a robot that could
+      autonomously navigate a surface while following a line of electrical
+      tape on the ground, while completing a series of tasks that are outlined
+      <a href="assets/CompetitionRules.pdf" target="_blank"><u>here</u></a>.
+    </p>
+  </div>
+
+  <div class="column">
+    <img src="assets/teamphoto.jpg" alt="Autonomous Robot project team">
+  </div>
+
+</div>
+
+
+<div class="project-section">
+
+  <div class="column">
+    <a href="https://cad.onshape.com/documents/52e7014a22681214e1fbe309/w/de1a0660c5293d94a979a077/e/1ccdbfbc0eca7409c34aaca4?renderMode=0&uiState=6aa32906e0fe89370f30ceb6" target="_blank">
+      <img src="assets/ezekielCAD.jpg" alt="Robot design">
+    </a>
+  </div>
+
+    <div class="column">
+    <h2>My Role</h2>
+<p>
+  During the project, I was primarily responsible for the mechanical design and manufacturing of the robot.
+  I designed the robot online using OnShape (the model is linked
+  <a href="https://cad.onshape.com/documents/52e7014a22681214e1fbe309/w/de1a0660c5293d94a979a077/e/1ccdbfbc0eca7409c34aaca4?renderMode=0&uiState=6aa32906e0fe89370f30ceb6"
+     target="_blank">
+    <u>here</u>
+  </a>),
+  and then I manufactured the parts using a variety of methods, such as 3D printers for more complicated parts,
+  as well as 6mm particle board which was cut with a laser cutter. There were also 6mm aluminum sheet metal
+  that was cut with a waterjet for the arm.
+</p>
+  </div>
+
+</div>
+
+<div class="project-section">
+
+    <div class="column">
+    <h2>Control Details</h2>
+    <p>
+      The robot primarily ran on an ESP32 microcontroller, which communicted via Rx and Tx pins to a Rasperry Pi 4.
+      The primary role for the ESP32 was to get feedback from the variety of sensors on the robot, and then 
+      use those to control the drive train and the mechanical arm. The Raspberry Pi was solely used to run machine vision
+      on the Pi Cam to identify teletubbies. 
+    </p>
+  </div>
+
+<div class="column">
+  <video controls muted playsinline>
+    <source src="assets/ezekiel-run.mp4" type="video/mp4">
+  </video>
+</div>
+
+</div>
+
+<div class="project-section">
+
+  <div class="column">
+    <a href="https://cad.onshape.com/documents/52e7014a22681214e1fbe309/w/de1a0660c5293d94a979a077/e/1ccdbfbc0eca7409c34aaca4?renderMode=0&uiState=6aa32906e0fe89370f30ceb6" target="_blank">
+      <img src="assets/ezekielCAD.jpg" alt="Robot design">
+    </a>
+  </div>
+
+      <div class="column">
+    <h2>Sensors</h2>
+    <p>
+      The robot had a variety of sensors for live input and feedback. The line following was done with 2 IR sensors on the underside of the robot. The robot
+      arm had a metal detecting coil with a metal detecting IC to detect if metal was inside of the rock. The front of the claw also had an integrated ToF
+      sensors to sweep for rocks, for less error. 
+    </p>
+  </div>
+
+</div>
+
+<div class="project-section">
+
+      <div class="column">
+    <h2>Arm Control</h2>
+    <p>
+      The robot arm itself was controlled via a set of 30kg-cm servos at the base of the arm, and a regular servo in order to drive the claw. The two
+      base servos were used to move the boom and the dipper of the arm, and they were positioned using an inverse kinematics algorithm specific to the
+      lengths of the boom and dipper in order to translate physical locations into relative angles. The base angle of the arm was controlled using a 
+      potentiometer located at the base, and a DC motor to drive the rotation. This feedback loop was controlled via self tuned a PID controller.
+    </p>
+  </div>
+
+    <div class="column">
+    <a href="https://cad.onshape.com/documents/52e7014a22681214e1fbe309/w/de1a0660c5293d94a979a077/e/1ccdbfbc0eca7409c34aaca4?renderMode=0&uiState=6aa32906e0fe89370f30ceb6" target="_blank">
+      <img src="assets/armBase.jpg" alt="Robot design">
+    </a>
+  </div>
+
+</div>
+
+</main>
+
+<div id="footer"></div>
+
+  <script src="js/script.js"></script>
 
 </body>
 </html>
