@@ -281,6 +281,16 @@ h2::selection {
   .content-text h2 {
     font-size: 2.5rem;
   }
+
+    .navbar-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
 
 /* Dropdown menu for contact information */
@@ -339,4 +349,16 @@ h2::selection {
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.column video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.navbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
