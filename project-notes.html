@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Load saved theme before the page renders -->
+<script>
+  if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.setAttribute("data-theme", "dark");
+  }
+</script>
+
+  <title>About Me</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+    crossorigin="anonymous"
+  />
+
+  <!-- Shared theme -->
+  <link rel="stylesheet" href="css/theme.css" />
+
+  <!-- Shared utilities -->
+  <link rel="stylesheet" href="css/utilities.css" />
+
+  <!-- General styling -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- About Me page-specific styling -->
+  <link rel="stylesheet" href="css/about-me.css" />
+</head>
+
+<body>
+
+      <!-- Navbar -->
+      <div id="navbar"></div>
+
+    <main class="about-content">
+
+  <h1>Autonomous Robot</h1>
+
+  <div class="project-section">
+
+  <div class="column">
+    <h2>Overview</h2>
+    <p>
+      Since highschool, I have been writing my notes largely in LaTex, using a LaTeX compiler "Obsidian". I have 
+      attached the live web browser version of my notes (published using Quartz, which live updates from my Github repository).
+      There are over 800 notes written there, and feature Wikipedia style backlinks in order to link similar concepts together.
+      You can click on the image to view the current version of my notes.
+    </p>
+  </div>
+
+  <div class="column">
+    <div class="column">
+    <a href="https://kjsimpson1-netizen.github.io/Notes/" target="_blank">
+      <img src="assets/obsidian_graph.jpg" alt="Robot design">
+    </a>
+  </div>
+  </div>
+
+</div>
+
+</main>
+
+<div id="footer"></div>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

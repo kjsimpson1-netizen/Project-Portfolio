@@ -88,13 +88,15 @@ h2::selection {
 }
 
 .github,
-.linked-in {
+.linked-in,
+.home-icon {
   filter: brightness(0);
   transition: filter 0.3s ease;
 }
 
 [data-theme="dark"] .github,
-[data-theme="dark"] .linked-in {
+[data-theme="dark"] .linked-in,
+[data-theme="dark"] .home-icon {
   filter: brightness(0) invert(1);
 }
 
@@ -253,7 +255,8 @@ h2::selection {
 
 /* Project 3 */
 .card:nth-child(3) {
-  background: url(../assets/project/project-three.png) center center/cover;
+  background: url(../assets/project/tacoma.png) center center/cover;
+
 }
 
 /* Project 4 */
@@ -269,6 +272,11 @@ h2::selection {
 /* Project 6 */
 .card:nth-child(6) {
   background: url(../assets/obsidian.jpg) center center/cover;
+}
+
+/*Obsidian Links*/
+.card:nth-child(7) {
+  background: url(../assets/obsidian_graph.jpg) center center/cover;
 }
 
 /* Media Queries */

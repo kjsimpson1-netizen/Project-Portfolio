@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Load saved theme before the page renders -->
-  <script>
-    if (localStorage.getItem("theme") === "dark") {
-      document.documentElement.setAttribute("data-theme", "dark");
-    }
-  </script>
+<script>
+  if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.setAttribute("data-theme", "dark");
+  }
+</script>
 
   <title>About Me</title>
 
@@ -36,56 +36,69 @@
 
 <body>
 
-<div id="navbar"></div>
+      <!-- Navbar -->
+      <div id="navbar"></div>
 
+    <main class="about-content">
 
-  <!-- About Me Content -->
-  <main class="about-content">
+  <h1>About Me</h1>
 
-    <a href="index.html" class="back-link">
-      ← Return to homepage
-    </a>
+  <div class="project-section">
 
-    <h1>About Me</h1>
+  <div class="column">
+    <h2>Growing Up</h2>
+    <p>
+      I was born and raised in Penction, British Columbia, in the Okanagan Valley. I grew up playing
+      team sports such as volleyball and soccer. I spent the winters skiing and snowboarding, and the summers lifeguarding on the
+      beach, as well as wakesurfing, and boating. 
+    </p>
+  </div>
 
-    <div class="columns">
+  <div class="column">
+    <img src="assets/teamphoto.jpg" alt="Autonomous Robot project team">
+  </div>
 
-      <div class="column">
-        <h2>Introduction</h2>
+</div>
 
-        <p>
-          Hey! I'm a 3rd year Engineering Physics student taking a
-          minor in honours mathematics. I aspire to pursue a masters
-          program after my undergraduate studies. I especially enjoy
-          working on math and physics problems.
-        </p>
-      </div>
+<div class="project-section">
 
-      <div class="column">
-        <h2>Hobbies and Interests</h2>
+  <div class="column">
+    <img src="assets/teamphoto.jpg" alt="Autonomous Robot project team">
+  </div>
 
-        <p>
-          In my free time, I enjoy going to the gym, listening to music,
-          and spending time with friends. During the winter, I like
-          skiing, and during the school year I play on multiple
-          intramural sports teams, such as volleyball and soccer.
-        </p>
-      </div>
+  <div class="column">
+    <h2>Hobbies</h2>
+    <p>
+      My hobbies include playing intramural volleyball, as well as 
+      weightlifting and working out at the gym. I enjoy listening to 
+      musics, and collecting vinyl records. I also enjoy playing the piano, 
+      and reading dystopian novels. 
+    </p>
+  </div>
 
-    </div>
+</div>
 
-    <hr>
+<div class="project-section">
 
-    <h3>Project Details</h3>
+  <div class="column">
+    <h2>Academic Interests</h2>
+    <p>
+      My primary acadmeic interests are in quantum mechanics, applied
+      mathematics, and condensed matter physics. I aspire to pursue a
+      doctorate in phyics after my undergraduate degree, and hope to 
+      gain relevant research experience during my undergraduate studies. 
+    </p>
+  </div>
 
-    <ul>
-      <li><strong>Role:</strong> Lead Developer</li>
-      <li><strong>Tools Used:</strong> HTML, CSS, Netlify</li>
-      <li><strong>Outcome:</strong> Successful cross-page linking test.</li>
-    </ul>
+  <div class="column">
+    <img src="assets/teamphoto.jpg" alt="Autonomous Robot project team">
+  </div>
 
-  </main>
+</div>
 
+</main>
+
+<div id="footer"></div>
 
   <script src="js/script.js"></script>
 
