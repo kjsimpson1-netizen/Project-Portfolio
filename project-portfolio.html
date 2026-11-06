@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Load saved theme before the page renders -->
+<script>
+  if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.setAttribute("data-theme", "dark");
+  }
+</script>
+
+  <title>Project Portfolio</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+    crossorigin="anonymous"
+  />
+
+  <!-- Shared theme -->
+  <link rel="stylesheet" href="css/theme.css" />
+
+  <!-- Shared utilities -->
+  <link rel="stylesheet" href="css/utilities.css" />
+
+  <!-- General styling -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- About Me page-specific styling -->
+  <link rel="stylesheet" href="css/about-me.css" />
+</head>
+
+<body>
+
+      <!-- Navbar -->
+      <div id="navbar"></div>
+
+    <main class="about-content">
+
+  <h1>Project Portfolio</h1>
+
+  <div class="project-section">
+
+  <div class="column">
+    <h2>Overview</h2>
+    <p>
+       I started this project portfolio in order to showcase my personal projects, however I also wanted to use it
+       as a way to practice my web development skills, to learn html, and to better incoorperate my github. Overall,
+       I largely coded this myself, with some assistance from AI to help to learn the language faster, as well as 
+       how to use the powershell for prompts. 
+    </p>
+  </div>
+
+  <div class="column">
+    <img src="assets/portfolio.png" alt="Autonomous Robot project team">
+  </div>
+
+</div>
+
+  <div class="project-section">
+
+  <div class="column">
+    <img src="assets/html.png" alt="Autonomous Robot project team">
+  </div>
+
+  <div class="column">
+    <h2>Implementation Details</h2>
+    <p>
+       I found an open source online template that I modified to my preferences. 
+       The code is availible on my <a href="https://github.com/kjsimpson1-netizen" target="_blank">GitHub</a>, and I plan to continue to update
+       this website as my projects develop and my skills improve. This website has helped to increase my comfort level with coding, and implementation
+       of code to a website. I did use the assistance of AI to implement the code, however I wrote as much by hand
+       in order to actual learn the language, rather than using AI as a crutch. 
+
+    </p>
+  </div>
+
+</div>
+
+  <div class="project-section">
+
+  <div class="column">
+    <img src="assets/html.png" alt="Autonomous Robot project team">
+  </div>
+
+  <div class="column">
+    <h2>Key Takeaways</h2>
+    <p>
+       This project has taught me a lot more about the back end of web development, and how to best organize and format files and code to be easily accessible.
+       It also gave me an opportunity to learn how to use github effectively, and how to use it to showcase my work, as well as storing my files. 
+    </p>
+  </div>
+
+</div>
+
+</main>
+
+<div id="footer"></div>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Load saved theme before the page renders -->
+<script>
+  if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.setAttribute("data-theme", "dark");
+  }
+</script>
+
+  <title>About Me</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+    crossorigin="anonymous"
+  />
+
+  <!-- Shared theme -->
+  <link rel="stylesheet" href="css/theme.css" />
+
+  <!-- Shared utilities -->
+  <link rel="stylesheet" href="css/utilities.css" />
+
+  <!-- General styling -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- About Me page-specific styling -->
+  <link rel="stylesheet" href="css/about-me.css" />
+</head>
+
+<body>
+
+      <!-- Navbar -->
+      <div id="navbar"></div>
+
+    <main class="about-content">
+
+  <h1>About Me</h1>
+
+  <div class="project-section">
+
+  <div class="column">
+    <h2>Growing Up</h2>
+    <p>
+      I was born and raised in Penction, British Columbia, in the Okanagan Valley. I grew up playing
+      team sports such as volleyball and soccer. I spent the winters skiing and snowboarding, and the summers lifeguarding on the
+      beach, as well as wakesurfing, and boating. 
+    </p>
+  </div>
+
+  <div class="column">
+    <img src="assets/surf.png" alt="Surfing">
+  </div>
+
+</div>
+
+<div class="project-section">
+
+  <div class="column">
+    <img src="assets/vball.JPG" alt="Autonomous Robot project team">
+  </div>
+
+  <div class="column">
+    <h2>Hobbies</h2>
+    <p>
+      My hobbies include playing intramural volleyball, as well as 
+      weightlifting and working out at the gym. I enjoy listening to 
+      musics, and collecting vinyl records. I also enjoy playing the piano, 
+      and reading dystopian novels. 
+    </p>
+  </div>
+
+</div>
+
+<div class="project-section">
+
+  <div class="column">
+    <h2>Academic Interests</h2>
+    <p>
+      My primary acadmeic interests are in quantum mechanics, applied
+      mathematics, and condensed matter physics. I aspire to pursue a
+      doctorate in phyics after my undergraduate degree, and hope to 
+      gain relevant research experience during my undergraduate studies. 
+    </p>
+  </div>
+
+  <div class="column">
+    <img src="assets/math.jpg" alt="Autonomous Robot project team">
+  </div>
+
+</div>
+
+</main>
+
+<div id="footer"></div>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
